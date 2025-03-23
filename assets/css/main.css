@@ -879,9 +879,9 @@ border-top-right-radius: 50%;
     height: 50px;
     z-index: 1;
     border-radius: 50%;
-    background-color: #23333c;
+    background-color: #23333c; /* Solid color background */
     position: relative;
-    overflow: hidden; 
+    overflow: hidden; /* Ensure the pseudo-element stays within the circle */
 }
 
 .fooddelivaryicon::before {
@@ -894,54 +894,54 @@ border-top-right-radius: 50%;
     background:linear-gradient(to top,#C9A581,#f3e0cd);
     transform: scalex(0) scaleY(0); 
     z-index: -1;
-    transition: all .5s; 
-    border-radius: 50%; 
+    transition: all .5s; /* Transition the opacity */
+    border-radius: 50%; /* Match the parent's border-radius */
 }
 .fooddelivaryicon img {
-    width: 30px;
+    width: 30px; /* Adjust size as needed */
     height: auto;
-    transition: filter 0.5s;
-    z-index: 1;
+    transition: filter 0.5s; /* Smooth transition for color change */
+    z-index: 1; /* Ensure the image is above the pseudo-element */
   }
   .food-delivary:hover .fooddelivaryicon img {
-    filter: brightness(0) invert(16%) sepia(74%) saturate(335%) hue-rotate(180deg); 
+    filter: brightness(0) invert(16%) sepia(74%) saturate(335%) hue-rotate(180deg); /* Custom filter to match #121D23 */
   }
 .food-delivary:hover .fooddelivaryicon::before {
    transform: scalex(1) scaleY(1); 
 }
+/* Existing styles remain unchanged */
 
-
-
+/* Media Query for Tablets (e.g., screens up to 768px) */
 @media (max-width: 768px) {
     .generator-container {
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
     }
 
     .bringing {
-        font-size: 48px;
+        font-size: 48px; /* Slightly smaller font size for tablets */
     }
 }
 
-
+/* Media Query for Mobile Devices (e.g., screens up to 576px) */
 @media (max-width: 576px) {
     .bringing {
-        font-size: 36px;
+        font-size: 36px; /* Smaller font size for mobile */
     }
 
     .timeopen {
-      width: 100%; 
-        left: 0;
-        bottom: 0px; 
+      width: 100%; /* Full width on mobile */
+        left: 0; /* Reset positioning */
+        bottom: 0px; /* Adjust positioning */
     }
 
     .food-delivary {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Stack food delivery items vertically */
+        align-items: center; /* Center align items */
     }
 
     .fooddelivarycontent {
-        width: 100%; 
-        text-align: center; 
+        width: 100%; /* Full width for content */
+        text-align: center; /* Center align text */
     }
 
     .aboutusbtnandwatchvideo{
@@ -999,7 +999,7 @@ border-top-right-radius: 50%;
 
 /* Modal Styling */
 .my-modal {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     width: 100%;
     height: 100%;
     position: fixed;
@@ -1008,7 +1008,7 @@ border-top-right-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; 
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 .d-none {
@@ -1019,14 +1019,14 @@ border-top-right-radius: 50%;
     background-color: antiquewhite;
     padding: 20px;
     border-radius: 20px;
-    width: 90%;
-    max-width: 800px; 
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width */
     position: relative;
 }
 
 iframe {
     width: 100%;
-    height: 400px; 
+    height: 400px; /* Fixed height for the video */
     border: none;
     border-radius: 10px;
 }
@@ -1040,7 +1040,7 @@ iframe {
     padding: 5px;
     top: -15px;
     right: -15px;
-    z-index: 1001; 
+    z-index: 1001; /* Ensure it's above the iframe */
 }
 @media screen and (max-width:567px) {
  
@@ -1062,22 +1062,22 @@ iframe {
     background: linear-gradient(to right, #C9A581, #f2decb);
     padding: 10px 20px;
     color: var(--secondColor);
-    border: none; 
-    cursor: pointer;
-    transition: all 2s ease-in-out; 
+    border: none; /* Optional: Remove default button border */
+    cursor: pointer; /* Add pointer cursor for better UX */
+    transition: all 2s ease-in-out; /* Smooth transition for hover */
     font-family: var(--mainFont);
     
   }
   
   .contactbtn:hover {
-    background: linear-gradient(to left, #C9A581, #f2decb); 
+    background: linear-gradient(to left, #C9A581, #f2decb); /* Reverse gradient on hover */
   }
  
 
-  
+  /* Ensure the parent container has proper layout */
  
   .cooseusright > * {
-    margin-top: 30px; 
+    margin-top: 30px; /* Space between elements inside cooseusright */
   }
   
 .slide-in-right {
@@ -1093,22 +1093,22 @@ iframe {
 
 
  
-
+/* Existing Styles */
 .chooseus {
   padding: 30px 0;
   background-image: url('../images/choose-us/beans.png');
-  height: auto; 
-  min-height: 100vh;
+  height: auto; /* Ensure the parent section has a height */
+  min-height: 100vh; /* Set a minimum height to contain the sticky element */
   background-repeat: no-repeat;
   background-position-y: calc(100% - 100px);
   background-color: #172127;
-  position: relative; 
+  position: relative; /* Ensure the parent is a positioning context */
 }
 
 .cooseusright {
   position: sticky;
-  top: 20px; 
-  max-height: calc(100dvh - 300px); 
+  top: 20px; /* Adjust this value to control when sticking starts */
+  max-height: calc(100dvh - 300px); /* Limit the height of the sticky element */
 }
   .servicespara {
     font-family: var(--mainFont);
@@ -1157,14 +1157,14 @@ iframe {
     transform: scalex(1) scaleY(1);
   }
   
-
+  /* Media Query for Tablets (max-width: 768px) */
   @media (max-width: 768px) {
-   
+    /* Adjust container padding */
     .chooseus {
       padding: 20px 0;
     }
   
-    
+    /* Make services appear in pairs */
     .chooseusleftcontent {
       display: flex;
       flex-wrap: wrap;
@@ -1172,13 +1172,13 @@ iframe {
     }
   
     .services {
-      width: 48%; 
-      margin-bottom: 20px; 
-      border: none; 
+      width: 48%; /* Two services per row */
+      margin-bottom: 20px; /* Add spacing between rows */
+      border: none; /* Remove borders for simplicity */
       padding: 15px;
     }
   
- 
+    /* Reduce icon and text size */
     .serviceicon {
       width: 40px;
       height: 40px;
@@ -1194,7 +1194,7 @@ iframe {
     }
   }
   
-
+/* Media Query for Mobile Devices (max-width: 567px) */
 @media (max-width: 567px) {
  
 
@@ -1204,7 +1204,7 @@ iframe {
     padding: 5px;
   }
   .cooseusright{
-    max-height: calc(100dvh - 200px);
+    max-height: calc(100dvh - 200px); /* Limit the height of the sticky element */
 
   }
   .flavorh2 {
@@ -1215,7 +1215,7 @@ iframe {
   width: 100%;
  }
  .services {
-  border: none !important; 
+  border: none !important; /* Remove all borders */
 }
 
 
@@ -1225,7 +1225,7 @@ iframe {
 }
 /*-----end second section----*/
 /*----start adventure section*/
-
+/* Existing Styles */
 .adventure {
     padding: 30px 0;
     background: linear-gradient(to right, rgba(8, 9, 20, 0.7), rgba(8, 9, 20, 0.7)), url('../images/journey/adventure.jpg');
@@ -1275,12 +1275,12 @@ iframe {
     transform: scalex(1) scaleY(1);
   }
   
-  
+  /* Achievement Section Layout */
   .achievement {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    gap: 20px;
+    display: flex; /* Default layout for larger screens */
+    justify-content: space-between; /* Space out the performance items */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Add spacing between items */
   }
   
   .performance {
@@ -1288,38 +1288,38 @@ iframe {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 23%; 
+    width: 23%; /* Four items per row */
   }
   
-
+  /* Media Query for Tablets (max-width: 768px) */
   @media (max-width: 768px) {
-    
+    /* Adjust container padding and height */
     .adventure {
       padding: 20px 0;
-      height: auto; 
+      height: auto; /* Remove fixed height */
     }
   
-   
+    /* Adjust heading size */
     h2 {
-      font-size: 2rem; 
+      font-size: 2rem; /* Reduce font size for smaller screens */
     }
   
-  
+    /* Adjust journey paragraph */
     .journeyparagraph {
       font-size: 1rem;
     }
   
-   
+    /* Stack performance items in rows */
     .achievement {
-      flex-direction: column; 
-      gap: 20px; 
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px; /* Add spacing between stacked items */
     }
   
     .performance {
-      width: 100%;
+      width: 100%; /* Full width for stacked layout */
     }
   
-  
+    /* Reduce icon and counter size */
     .perficon {
       width: 40px;
       height: 40px;
@@ -1330,24 +1330,24 @@ iframe {
     }
   }
   
- 
+  /* Media Query for Mobile Devices (max-width: 480px) */
   @media (max-width: 480px) {
-
+    /* Further reduce padding */
     .adventure {
       padding: 15px 0;
     }
   
-   
+    /* Adjust heading size */
     h2 {
       font-size: 1.5rem;
     }
   
-   
+    /* Further reduce journey paragraph */
     .journeyparagraph {
       font-size: 0.9rem;
     }
   
-    
+    /* Further reduce icon and counter size */
     .perficon {
       width: 35px;
       height: 35px;
@@ -1359,7 +1359,7 @@ iframe {
   }
 /*----end adventure section*/
 /*start our price section*/  
-
+ /* Existing Styles */
 .ourprice {
     background-image: url('../images/about-us/pricing-bg-image.png');
     background-repeat: no-repeat;
@@ -1479,20 +1479,20 @@ iframe {
     color: var(--mainColor);
   }
   
- 
+  /* Media Query for Smaller Devices */
   @media (max-width: 768px) {
-  
+    /* Adjust container width and padding */
     .ourprice {
       padding: 20px;
     }
   
-  
+    /* Reduce font size for headings */
     .ourprice h2 {
       font-size: 32px;
       margin-bottom: 30px;
     }
   
-  
+    /* Adjust button size */
     .btn-custom {
       padding: 8px 16px;
       font-size: 14px;
@@ -1501,7 +1501,7 @@ iframe {
         width: 100%;
     }
   
-   
+    /* Adjust image size and radius */
     .priceimg {
       margin-top: 0;
       border-radius: 40% 40% 0 0;
@@ -1512,7 +1512,7 @@ iframe {
   .ourprice .tab-content{
     width: 100%;
   }
-   
+    /* Adjust menu item layout */
     .menu-item {
       flex-direction: column;
       align-items: flex-start;
@@ -1523,39 +1523,39 @@ iframe {
       margin-bottom: 10px;
     }
   
-  
+    /* Adjust dashed line */
     .dashed {
       width: 100%;
       margin: 10px 0;
     }
   
-   
+    /* Adjust glow effect */
     .glow {
       width: 50%;
       height: 150%;
     }
   
-
+    /* Adjust link styling */
     .link {
       font-size: 14px;
     }
   }
   
-
+  /* Media Query for Very Small Devices */
   @media (max-width: 480px) {
-    
+    /* Further reduce font size for headings */
     .ourprice h2 {
       font-size: 24px;
       margin-bottom: 20px;
     }
   
-   
+    /* Simplify button styles */
     .btn-custom {
       padding: 6px 12px;
       font-size: 12px;
     }
   
-    
+    /* Simplify image styles */
     .priceimg {
       border-radius: 30% 30% 0 0;
     }
@@ -1563,7 +1563,7 @@ iframe {
       border-radius: 30% 30% 0 0;
     }
   
-
+    /* Simplify menu item layout */
     .menu-item {
       flex-direction: column;
       align-items: flex-start;
@@ -1574,7 +1574,7 @@ iframe {
       margin-bottom: 8px;
     }
   
-  
+    /* Simplify glow effect */
     .glow {
       width: 60%;
       height: 120%;
@@ -1582,6 +1582,9 @@ iframe {
   }
 /*end our price section*/
 /*start section different services*/
+/* General Reset */
+
+
 .deifferentservices {
   position: relative;
   height: 100dvh;
@@ -1604,7 +1607,7 @@ iframe {
   transition: background-color 1s ease;
 }
 
-
+/* Active Tab Button */
 .tablinks.active {
   background: linear-gradient(to top, #121D23,#121d2300,#121d2300,#121d2300,#121d2300);
 }
@@ -1625,7 +1628,7 @@ iframe {
   object-fit: cover;
 }
 
-
+/* Show Active Tab Content */
 .tabcontent.active {
   opacity: 1;
 }
@@ -1633,7 +1636,7 @@ iframe {
   color: var(--mainColor);
 
 }
-
+/* Base Styles */
 .deifferentservices {
   position: relative;
   height: 100dvh;
@@ -1654,10 +1657,10 @@ iframe {
   width: 80%;
   border-right: 0.1px solid #ffffff19;
   transition: background-color 1s ease;
-  padding: 10px 20px;
+  padding: 10px 20px; /* Add padding for better touch targets */
 }
 
-
+/* Active Tab Button */
 .tablinks.active {
   background: linear-gradient(to top, #121D23, #121d2300, #121d2300, #121d2300, #121d2300);
 }
@@ -1678,7 +1681,7 @@ iframe {
   object-fit: cover;
 }
 
-
+/* Show Active Tab Content */
 .tabcontent.active {
   opacity: 1;
 }
@@ -1693,7 +1696,7 @@ iframe {
   transition: background-color 1s ease;
 }
 
-
+/* Active Tab Button */
 .tablinks.active {
   background: linear-gradient(to top, #121D23, #121d2300, #121d2300, #121d2300, #121d2300);
 }
@@ -1706,13 +1709,13 @@ iframe {
   z-index: 10;
 }
 
-
+/* Media Query for Screens ≤ 768px */
 @media (max-width: 768px) {
   .tablinks {
     width: 100%;
     border-right: none;
     border-bottom: 0.1px solid #ffffff19;
-    padding: 15px 20px; 
+    padding: 15px 20px; /* Increase padding for better touch targets */
   }
 
   .tabcontent img {
@@ -1720,7 +1723,7 @@ iframe {
   }
 }
 
-
+/* Media Query for Screens ≤ 576px */
 @media (max-width: 576px) {
  
 
@@ -1729,7 +1732,7 @@ iframe {
   }
 }
 
-
+/* Media Query for Screens ≤ 480px */
 @media (max-width: 480px) {
   .tab {
     width: 100%;
@@ -1746,7 +1749,7 @@ iframe {
   }
 
   .tabcontent img {
-    object-fit: contain;
+    object-fit: contain; /* Ensure images fill the container */
   }
 }
 /*end section different services*/
@@ -1785,7 +1788,7 @@ border: 10px solid white;
     font-size: 50px;
    }
   .scedule {
-    display: inline-block;
+    display: inline-block; /* Ensures the button behaves like a block */
     padding: 15px 40px;
     border: 2px solid var(--mainColor);
     background: none;
@@ -1793,10 +1796,10 @@ border: 10px solid white;
     font-family: var(--mainFont);
     text-decoration: none; 
     overflow: hidden; 
-    z-index: 1; 
+    z-index: 1; /* Creates a stacking context */
   }
   
-  
+  /* Pseudo-element for the hover effect */
   .scedule::before {
     content: '';
     position: absolute;
@@ -1804,16 +1807,16 @@ border: 10px solid white;
     left: 0;
     width: 100%;
     height: 100%;
-    background:linear-gradient(to right,#C9A581,#edd4bb) ;
-    transform: scale(0);
-    z-index: -1; 
-    transition: transform 0.5s ease; 
+    background:linear-gradient(to right,#C9A581,#edd4bb) ; /* Hover background color */
+    transform: scale(0); /* Start as invisible */
+    z-index: -1; /* Place it behind the button's content */
+    transition: transform 0.5s ease; /* Smooth transition */
     border-radius: 75px;
   }
   
-
+  /* Hover effect for the pseudo-element */
   .scedule:hover::before {
-    transform: scale(1); 
+    transform: scale(1); /* Expand to fill the button */
   }
   .scedule:hover {
     color: var(--secondColor);
@@ -1861,8 +1864,8 @@ border: 10px solid white;
 /* Testimonials Section */
 .testimonials {
   height: 100dvh;
-  max-width: 100vw; 
-  overflow: hidden;
+  max-width: 100vw; /* Ensure it doesn't exceed the viewport width */
+  overflow: hidden; /* Prevent overflow */
   background: linear-gradient(to right, #172730e9, #172730e9), url('../images/testimonials/testimonial-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -1874,52 +1877,52 @@ border: 10px solid white;
 }
 
 .carousel {
-  max-width: 100%; 
-  margin: 0 auto; 
+  max-width: 100%; /* Ensure the carousel fits within the container */
+  margin: 0 auto; /* Center the carousel */
 }
 
 .carousel-inner {
-  max-width: 100%; 
-  overflow: hidden;
+  max-width: 100%; /* Constrain the inner content */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .carousel-item p {
-  word-wrap: break-word; 
+  word-wrap: break-word; /* Break long words to prevent overflow */
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
   .testimonials {
-    min-height: 80dvh;
+    min-height: 80dvh; /* Reduce height slightly */
   }
 
   .testimonials .aboutus {
-    font-size: 1rem; 
+    font-size: 1rem; /* Reduce font size */
   }
 
   .testimonials h2 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem; /* Reduce heading size */
   }
 
   .testimonials .carousel-inner p {
-    font-size: 1.2rem;
-    line-height: 1.5; 
+    font-size: 1.2rem; /* Reduce testimonial text size */
+    line-height: 1.5; /* Maintain readability */
   }
 
   .carousel {
-    padding: 0 10px;
+    padding: 0 10px; /* Add some padding for smaller screens */
   }
 }
 
 @media (max-width: 576px) {
   .testimonials {
-    min-height: 60dvh;
+    min-height: 60dvh; /* Further reduce height */
     max-width: 100vw;
     overflow: hidden;
   }
 
   .testimonials .aboutus {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Smaller font size for very small screens */
   }
 
   .testimonials h2 {
@@ -1928,12 +1931,12 @@ border: 10px solid white;
   }
 
   .testimonials .carousel-inner p {
-    font-size: 1rem;
-    line-height: 1.4; 
+    font-size: 1rem; /* Smaller testimonial text size */
+    line-height: 1.4; /* Maintain readability */
   }
 
   .carousel {
-    padding: 0 5px; 
+    padding: 0 5px; /* Further reduce padding for very small screens */
   }
 }
 /*start fingertips section*/
@@ -1954,8 +1957,8 @@ background-size: calc(100% - 1000px);
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.1);
 }
 .app-store-button:active {
-  transform: scale(0.98); 
-  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.2); 
+  transform: scale(0.98); /* Slight scaling effect */
+  box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.2); /* Deeper shadow */
 }
 @media screen and (max-width : 576px) {
   .app-store-button{
@@ -1963,10 +1966,10 @@ background-size: calc(100% - 1000px);
   }
 }
 /*end fingertips section*/
-/*start footer*/
+/* Default styles */
 .footer {
-  height: 100dvh;
-  min-height: 100dvh; 
+  height: 100dvh; /* Use auto height to adapt to content */
+  min-height: 100dvh; /* Ensure it covers at least the full viewport height */
   background: linear-gradient(to right, #172730e9, #172730e9),
     url('../images/footer/footer-bg-image.jpg');
   background-repeat: no-repeat;
@@ -2024,10 +2027,10 @@ background-size: calc(100% - 1000px);
   color: #000;
 }
 
-
+/* Media Query for Tablets (768px and below) */
 @media (max-width: 768px) {
   .footer {
-    min-height: 150dvh; 
+    min-height: 150dvh; /* Adjust height for smaller screens */
   }
 
   .telfooter {
@@ -2041,18 +2044,18 @@ background-size: calc(100% - 1000px);
   }
 
   .borderright {
-    border-right: none; 
-    border-bottom: 1px solid #d1e7dd37; 
+    border-right: none; /* Remove borders for better mobile layout */
+    border-bottom: 1px solid #d1e7dd37; /* Add bottom borders instead */
     padding-bottom: 20px;
     margin-bottom: 20px;
   }
   
 }
 
-
+/* Media Query for Mobile Devices (576px and below) */
 @media (max-width: 576px) {
   .footer {
-    min-height: 200dvh; 
+    min-height: 200dvh; /* Adjust height for very small screens */
     margin-top: 20%;
   }
 
@@ -2067,24 +2070,24 @@ background-size: calc(100% - 1000px);
   }
 
   .top {
-    flex-direction: column; 
+    flex-direction: column; /* Stack sections vertically */
     align-items: center;
     gap: 30px;
   }
 
   .bottom {
-    flex-direction: column; 
+    flex-direction: column; /* Stack footer elements vertically */
     align-items: center;
     gap: 20px;
   }
 
   .sociallinks {
-    flex-direction: column;
+    flex-direction: column; /* Stack social icons vertically */
     gap: 10px;
   }
 
   .borderright {
-    border-bottom: none; 
+    border-bottom: none; /* Remove borders for stacked layout */
   }
   .marginsmalltop{
     margin-top: 40px;
