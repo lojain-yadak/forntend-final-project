@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --mainColor:#C9A581 ;
     --secondColor:#121D23;
@@ -134,6 +135,54 @@
         --bs-breakpoint-xl: 1200px;
         --bs-breakpoint-xxl: 1400px;
         --swiper-navigation-size: 44px;
+}
+#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--mainColor);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+/* Fade Up Animation */
+@keyframes fadeUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Fade Left Animation */
+@keyframes fadeLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Base Styles for Elements */
+.fade-up, .fade-left {
+  opacity: 0; /* Start invisible */
+}
+
+/* Animation Classes */
+.fade-up.animate {
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.fade-left.animate {
+  animation: fadeLeft 1s ease-out forwards;
 }
 a{
     color: none;
@@ -1770,7 +1819,7 @@ iframe {
 }
 .offercircleimg1 img{
 width: 100%;
-height: 100%;
+
 border-radius: 50%;
 border: 10px solid white;
 
@@ -1863,7 +1912,7 @@ border: 10px solid white;
 
 /* Testimonials Section */
 .testimonials {
-  height: 100dvh;
+ 
   max-width: 100vw; /* Ensure it doesn't exceed the viewport width */
   overflow: hidden; /* Prevent overflow */
   background: linear-gradient(to right, #172730e9, #172730e9), url('../images/testimonials/testimonial-bg.jpg');
@@ -1941,13 +1990,12 @@ border: 10px solid white;
 }
 /*start fingertips section*/
 .fingertips{
-  height: 70dvh;
-  margin-top: 20%;
+ 
   background-image: url('../images/fingertips/offer-circle-image-1-removebg-preview.png');
   background-position-x: right;
   background-position-y:center ;
   background-repeat: no-repeat;
-background-size: calc(100% - 1000px); 
+background-size:contain; 
 }
 .app-store-button{
   background: linear-gradient(to right,#c9a581,#ebd0b5);
@@ -2103,4 +2151,277 @@ background-size: calc(100% - 1000px);
   .footerlogo{
     width: 50%;
   }
+}
+/*---------------------start contact us page--------------*/
+.header-contact{
+  position: relative;
+      background:linear-gradient(to right,#121d23ad,#121D23ad), url('../images/contactuspage/page-header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      height: 500px;
+}
+.breadcrumb {
+  --bs-breadcrumb-divider-color: white; /* Set the divider color to white */
+}
+.hyberlink{
+  color: #fff;
+  transition: all .5s ease;
+}
+.hyberlink:hover{
+color: var(--mainColor) !important;
+}
+.telandemail{
+  border:1px solid #dfdfdf13;
+}
+.telph{
+  border-right: 1px solid #dfdfdf13;
+}
+/* General Styles */
+
+
+.contactusright {
+  background-color: var(--secondary-color); /* Light background for contrast */
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+input.active{
+  border: none;
+}
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f4d9b7;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e6cdaa;
+}
+form ::placeholder{
+  color: #ffffff;
+}
+.success-message {
+  color: green;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.message{
+color: #FFFFFF;}
+
+/* Apply grayscale filter to the iframe */
+.contactusiframe {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Remove grayscale filter on hover */
+.contactusiframe:hover {
+  filter: grayscale(0%);
+}
+/*start about us page*/
+.team-card {
+  width: 25%;
+position: relative;
+overflow: hidden;
+border-radius: 16px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+transform: scale(1.05);
+}
+
+.team-card img {
+width: 100%;
+border-radius: 16px;
+}
+
+.overlay {
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: white;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.team-card:hover .overlay {
+opacity: 1;
+}
+
+
+
+
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+.social-icon {
+width: 40px;
+height: 40px;
+background-color: #d9b78e;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+background-color: #c7a37b;
+}
+
+.social-icon i {
+color: white;
+font-size: 20px;
+}
+
+
+
+.faq-item {
+  background: linear-gradient(to left,#121D23,#121D23ad ,#2c3e485a,#37454c5a);
+  border: 1px solid #ffffff32;
+}
+
+.faq-question {
+  font-size: 18px;
+  background: none;
+}
+.faq-answer {
+  font-size: 16px;
+  margin-top: 16px;
+  display: none; /* Hide answers by default */
+  background: none;
+}
+.faq-icon {
+  font-size: 30px;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--mainColor);
+  transition: transform 0.3s ease;
+}
+.faq-item.expanded .faq-icon {
+  transform: rotate(45deg); /* Rotate icon when expanded */
+}
+.faq-item.expanded .faq-answer {
+  display: block; /* Show answer when expanded */
+}
+
+
+/*----start services page*/
+.information {
+  border:1px solid #adadda39 ;
+}
+.readmore:hover a{
+color: #ffffff;
+}
+.readmore:hover svg{
+  fill: #fff;
+  }
+  .read-more-btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; /* Default text color */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions for color and scaling */
+  }
+  .read-more-btn::after {
+    content: '\279C'; /* Unicode for right arrow */
+  position: absolute;
+  top: 50%;
+  color: var(--mainColor); /* Arrow color */
+  transform: translateY(-50%);
+  right: 0px; /* Initial position of the arrow */
+  opacity: 1; /* Always visible */
+  transition: right 0.3s ease; /* Smooth transition for arrow movement */
+}
+
+  .read-more-btn:hover a{
+    color: #fff; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+  }
+  
+  .read-more-btn:hover::after {
+    right: -5px; /* Move the arrow closer to the text */
+    color: #fff;
+  }
+
+
+  /*start menu page*/
+/* Container for the image */
+/* Container for the image */
+/* General Styles */
+
+
+/* styles.css */
+
+
+/* styles.css */
+
+.item:nth-child(1),
+.item:nth-child(2),
+.item:nth-child(3),
+.item:nth-child(4),
+.item:nth-child(5),
+.item:nth-child(6),
+.item:nth-child(7),
+.item:nth-child(8),
+.item:nth-child(9) {
+  width: 45%;
+  color: #f0f0f0;
 }
